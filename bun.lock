@@ -6,8 +6,8 @@
       "name": "@sudobility/mogulgame_lib",
       "devDependencies": {
         "@eslint/js": "~9.39.5",
-        "@sudobility/mogulgame_client": "^0.0.39",
-        "@sudobility/mogulgame_types": "^0.0.30",
+        "@sudobility/mogulgame_client": "^0.0.40",
+        "@sudobility/mogulgame_types": "^0.0.31",
         "@sudobility/types": "^1.9.76",
         "@tanstack/react-query": "~5.104.5",
         "@testing-library/react": "~16.3.3",
@@ -139,9 +139,9 @@
 
     "@standard-schema/spec": ["@standard-schema/spec@1.1.0", "", {}, "sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w=="],
 
-    "@sudobility/mogulgame_client": ["@sudobility/mogulgame_client@0.0.39", "https://npm.pkg.github.com/download/@sudobility/mogulgame_client/0.0.39/1bd4bb47402ff42f679cce9bfd3d7fb3edf4632f", { "peerDependencies": { "@sudobility/types": "^1.9.76", "@tanstack/react-query": ">=5.0.0", "react": ">=18.0.0" } }, "sha512-CPwO2GcOQ0dcWpICBnJJZgLDlf56Iwth8uUw+Kjl74tBzBq1RrjccCoqTjgtuWfVYh0MxvnNv4yQ75GDuL9Wmg=="],
+    "@sudobility/mogulgame_client": ["@sudobility/mogulgame_client@0.0.40", "https://npm.pkg.github.com/download/@sudobility/mogulgame_client/0.0.40/80bc8671cde6b411fd1325b4e2555e69ebc1b101", { "peerDependencies": { "@sudobility/types": "^1.9.76", "@tanstack/react-query": ">=5.0.0", "react": ">=18.0.0" } }, "sha512-g+mndq7oDfwTsoaUytT5ePp4VekLQO/7Wtrj86tl6THRGnBZ5SgdTuabbu9Gi0cvGmXZJD0ReY+5hN6hTsrHtQ=="],
 
-    "@sudobility/mogulgame_types": ["@sudobility/mogulgame_types@0.0.30", "https://npm.pkg.github.com/download/@sudobility/mogulgame_types/0.0.30/39292a0a3d417c019108e98888b8c2c2ed1576ae", { "peerDependencies": { "@sudobility/types": "^1.9.76" } }, "sha512-qEJm/MNaPRM007IrHkvol+EAzVTRrK0e5xsFM8h5F89nN8dr8spLbA+fixNeQzKqvntPU2nYTzK2V7eJ/jydmA=="],
+    "@sudobility/mogulgame_types": ["@sudobility/mogulgame_types@0.0.31", "https://npm.pkg.github.com/download/@sudobility/mogulgame_types/0.0.31/04c7578f674102a233e9fd4416ae12b720651db3", { "peerDependencies": { "@sudobility/types": "^1.9.76" } }, "sha512-2KZrJ7UQclaprsaIlPj3UJ3t2vo56PV6H5dm8RT4TjXiQePE4su8AdhdiZVVnW7OyAK4JQ6ul1dEWvW8kfeBLw=="],
 
     "@sudobility/types": ["@sudobility/types@1.9.76", "https://npm.pkg.github.com/download/@sudobility/types/1.9.76/71635156f72fd9461107d5f147b3dc1c49f863d0", {}, "sha512-b7maZHR5wM84VlQ+l9R+2guzSOrExog6OUNy1oCe7h0abW13syycmnLQL0g+qql0aQ84qTB4A0mJelhY3Vef4Q=="],
 
@@ -325,7 +325,7 @@
 
     "https-proxy-agent": ["https-proxy-agent@7.0.6", "", { "dependencies": { "agent-base": "^7.1.2", "debug": "4" } }, "sha512-vK9P5/iUfdl95AI+JVyUuIcVtd4ofvtrOr3HNtM2yxC9bnMbEdp3x01OhQNnjb8IJYi38VlTE3mBXwcfvywuSw=="],
 
-    "ignore": ["ignore@7.0.13", "", {}, "sha512-2E8Q6rh+1RRSq/YdaGsNfXsEZy9FVqv6BSSrkmZJP7BnaoPnRfKL+YaofPvP+5rzdk144qSm6i4+hvPgUcbV4Q=="],
+    "ignore": ["ignore@7.0.14", "", {}, "sha512-wCBiZ77u1tuWde6G/nfOtLaCTYcFDU5yCzARzK10y+rLhzYoL7a7yEemcopcc2Mzow7gZOIjnV2ym1NYmdiJOQ=="],
 
     "import-fresh": ["import-fresh@3.3.1", "", { "dependencies": { "parent-module": "^1.0.0", "resolve-from": "^4.0.0" } }, "sha512-TR3KfrTZTYLPB6jUjfx6MF9WcWrHL9su5TObK4ZkYgBdWKPOFoSoQIdEuTuR82pmtxH2spWG9h6etwfr1pLBqQ=="],
 
