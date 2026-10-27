@@ -1,6 +1,6 @@
 {
   "name": "@sudobility/mogulgame_lib",
-  "version": "0.0.39",
+  "version": "0.0.40",
   "description": "Business logic library for Starter with Zustand stores",
   "type": "module",
   "main": "dist/index.js",
@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@eslint/js": "~10.0.1",
-    "@sudobility/mogulgame_client": "^0.0.41",
+    "@sudobility/mogulgame_client": "^0.0.42",
     "@sudobility/mogulgame_types": "^0.0.31",
     "@sudobility/types": "^1.9.76",
     "@tanstack/react-query": "~5.104.5",
