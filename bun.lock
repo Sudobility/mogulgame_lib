@@ -6,9 +6,9 @@
       "name": "@sudobility/mogulgame_lib",
       "devDependencies": {
         "@eslint/js": "~10.0.1",
-        "@sudobility/mogulgame_client": "^0.0.43",
-        "@sudobility/mogulgame_types": "^0.0.32",
-        "@sudobility/types": "^1.9.78",
+        "@sudobility/mogulgame_client": "^0.0.44",
+        "@sudobility/mogulgame_types": "^0.0.33",
+        "@sudobility/types": "^1.9.79",
         "@tanstack/react-query": "~5.104.5",
         "@testing-library/react": "~16.3.3",
         "@testing-library/react-hooks": "~8.0.1",
@@ -29,7 +29,7 @@
         "zustand": "~5.0.16",
       },
       "peerDependencies": {
-        "@sudobility/types": "^1.9.78",
+        "@sudobility/types": "^1.9.79",
         "@tanstack/react-query": ">=5.0.0",
         "react": ">=18.0.0",
         "zustand": ">=5.0.0",
@@ -175,11 +175,11 @@
 
     "@standard-schema/spec": ["@standard-schema/spec@1.1.0", "", {}, "sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w=="],
 
-    "@sudobility/mogulgame_client": ["@sudobility/mogulgame_client@0.0.43", "https://npm.pkg.github.com/download/@sudobility/mogulgame_client/0.0.43/5cd3c8824c110712c968c7f30bd48f7f771d6836", { "peerDependencies": { "@sudobility/types": "^1.9.78", "@tanstack/react-query": ">=5.0.0", "react": ">=18.0.0" } }, "sha512-H/Rt83oxvaIsqrUyC5DUnCSVyQf65o2TsLZ+5nlpJcl1xLa/ZcRFfdMMUUCTwLd0zmKR0epIS+E06BUMAUMS+A=="],
+    "@sudobility/mogulgame_client": ["@sudobility/mogulgame_client@0.0.44", "https://npm.pkg.github.com/download/@sudobility/mogulgame_client/0.0.44/9f2862193c6c0258445ffc1b338b17a6de9e1454", { "peerDependencies": { "@sudobility/types": "^1.9.79", "@tanstack/react-query": ">=5.0.0", "react": ">=18.0.0" } }, "sha512-aXgRJUkaxYEKoHuAKqDyvIht+cFWmNjabUocBYX6sfrqFma4+ywKS+SDEiyV+nG1n1ICI/0udLncPy/3J9A/ug=="],
 
-    "@sudobility/mogulgame_types": ["@sudobility/mogulgame_types@0.0.32", "https://npm.pkg.github.com/download/@sudobility/mogulgame_types/0.0.32/a86f6d8c642b545e67ea01c0310c2d27e0481328", { "peerDependencies": { "@sudobility/types": "^1.9.78" } }, "sha512-qru2AEHz/6P4hc48Lizgj4ALM5RFr/BtHnV2DCm0zcUJXiwlD+ieybnVIAcnkBlQKn32EkaAJymESIW593aOTA=="],
+    "@sudobility/mogulgame_types": ["@sudobility/mogulgame_types@0.0.33", "https://npm.pkg.github.com/download/@sudobility/mogulgame_types/0.0.33/e012a8b199f78f4d61e1ce1e670534df623af24f", { "peerDependencies": { "@sudobility/types": "^1.9.79" } }, "sha512-pl6hyFVh3UHqlaW8ziTLEVF+aqrpLlhLfBrtuA5cjzMur1hphUwUPrt+EDprSVOxURgqFN12ZM4lye89GwC3Kw=="],
 
-    "@sudobility/types": ["@sudobility/types@1.9.78", "https://npm.pkg.github.com/download/@sudobility/types/1.9.78/19ca0df5ad7d490bafc1b84384a8002f5dbc29ea", {}, "sha512-W6DYMUf7D0cVVUHDv5T8YZ339Wyay6xPx0CsdfNVgHDsm1ISDLhwacUwlM9xnvwXHGuAhP77wRVVo3uKGZe46Q=="],
+    "@sudobility/types": ["@sudobility/types@1.9.79", "https://npm.pkg.github.com/download/@sudobility/types/1.9.79/59975e39d6ab7e215418a489ef3cfe214b7521f4", {}, "sha512-rRtDT++fVy+I1m6E31fq752lxCQytFzwfqpJe5wDMPLcC1rJOBa7v+4+5e3cmX8VV1CsuLg8PTLMFe6A7AELRQ=="],
 
     "@tanstack/query-core": ["@tanstack/query-core@5.104.5", "", {}, "sha512-Q94gI8Opd+CbdVNOdj8ZCyV8WqLYitrDq1t96Xc8WZT6lY0r5iRnJLXYDxMex7EEf2v+mXvn4FcjaBKSxXZQ9A=="],
 

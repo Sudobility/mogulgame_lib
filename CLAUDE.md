@@ -7,7 +7,9 @@
 
 Pure, synchronous business-logic helpers for MogulGame.
 
-**npm**: `@sudobility/mogulgame_lib` (restricted, BUSL-1.1)
+**Package**: `@sudobility/mogulgame_lib` (private, BUSL-1.1). Published to **GitHub Packages**
+(`npm.pkg.github.com`), not the public npm registry — see `.npmrc` and `publish-target: github`
+in `.github/workflows/ci-cd.yml`.
 
 > **No stores, no hooks, no network, no React.** The `package.json` description still says "with
 > Zustand stores" and `zustand` is still a peer dependency, but `zustand` is imported in **zero**
@@ -39,14 +41,19 @@ src/
 ## Commands
 
 ```bash
-bun run build          # Build ESM
+bun install            # Required first (Bun only — never npm/yarn/pnpm)
+bun run build          # tsc -p tsconfig.build.json + scripts/fix-esm-imports.mjs
 bun run clean          # Remove dist/
-bun run test           # vitest run -- there are NO test files; exits 0 vacuously
-bun run typecheck      # TypeScript check
-bun run lint           # Run ESLint
-bun run verify         # typecheck + lint + test + build (use before commit)
+bun run test:unit      # vitest run -- there are NO test files; exits 0 vacuously
+bun run test:watch     # vitest in watch mode
+bun run typecheck      # tsc --noEmit
+bun run lint           # Run ESLint over src/
+bun run verify         # typecheck + lint + test:unit + build (use before commit)
 bun run prepublishOnly # Clean + build (runs on publish)
 ```
+
+There is **no `bun run test` script** and `bun test` runs Bun's own runner, not vitest.
+Use `test:unit` / `test:watch`.
 
 ## Public API
 
@@ -65,8 +72,9 @@ bun run prepublishOnly # Clean + build (runs on publish)
 
 ### `business/utils/currency.ts`
 
-`CURRENCY_MAP`, `formatPrice(amount, country)`, `formatPriceShort(amount, country)` (`1.5M` / `250K`),
-`getCurrencySymbol(country)`, `getCurrencyCode(country)`.
+`formatPrice(amount, country)`, `formatPriceShort(amount, country)` (`1.5M` / `250K`),
+`getCurrencySymbol(country)`, `getCurrencyCode(country)`. Countries: `US CA GB AE ES AU`.
+(`CURRENCY_MAP` is an internal const — **not** exported.)
 
 ## The 5x Rule Exists Twice, On Purpose
 
@@ -77,12 +85,17 @@ not an accident to be "fixed" by deleting either side.
 
 ## Dependencies
 
-Peer:
+Peer (from `package.json`):
 
-- `@sudobility/types`
+- `@sudobility/types` — **not actually imported** (the real type import is `@sudobility/mogulgame_types`, see below)
 - `react` (>=18) — **not actually imported**
 - `@tanstack/react-query` (>=5) — **not actually imported**
 - `zustand` (>=5) — **not actually imported**
+
+The only module actually imported is `@sudobility/mogulgame_types` (`CountryCode`, `PretendOffer`,
+`PretendOfferResolution`, `Transaction`). It is declared only as a **devDependency**, yet the emitted
+`dist/**/*.d.ts` reference it — so consumers must also have `@sudobility/mogulgame_types` installed
+for types to resolve.
 
 The React and react-query peers are why `mogulgame_api` **must not import this package**: doing so
 would drag React into a Bun server. Shared logic that both the API and the app need (e.g. `isCrawler`)
@@ -104,7 +117,7 @@ belongs in `mogulgame_types`, which has no React dependency.
 
 ## Gotchas
 
-- **There are no tests.** `bun run test` prints "No test files found" and exits 0, so `bun run verify` passes vacuously. Adding a test file is the only way `verify` starts protecting you
+- **There are no tests.** `bun run test:unit` prints "No test files found, exiting with code 0" (vitest `passWithNoTests: true`), so `bun run verify` passes vacuously. Adding a `*.test.ts` file is the only way `verify` starts protecting you
 - `formatResolutionSummary`, `calculateBalanceFromLedger`, and `MAX_OFFER_MULTIPLIER` are exported but imported by nothing. Don't assume an export is load-bearing
 - The `package.json` description and the `zustand` peer dependency are stale template residue -- see the note at the top
 - This is a published npm package -- editing `src/` has no effect on `mogulgame_app` until published and the dep bumped; use `bun link` for local iteration
